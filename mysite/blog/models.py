@@ -27,6 +27,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    def testMethod(self):
+        return 1+1
 
 class Comment(models.Model):
     post = models.ForeignKey('blog.post', related_name='comments')
